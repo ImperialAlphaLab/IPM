@@ -28,4 +28,5 @@ class CLRLED(LED):
         self.CLR = rgb.RGB
     def _show_color(self, rgb):
         pass
-    def _read_imprgbcode(self, imprgbcode)
+    def _read_imprgbcode(self, imprgbcode):
+        pass
