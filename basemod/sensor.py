@@ -104,3 +104,11 @@ class LSENSOR(SENSOR):
         self.Levelgraph = []
     def _levelm(self):
         pass
+class STATESNESOR(SENSOR):
+    def __init__(self):
+        SENSOR.__init__(self)
+        self.State = False
+        self.Stategraph = []
+    def _get_state(self):
+        return self.State
+    
