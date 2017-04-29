@@ -1,5 +1,5 @@
 from imputil import rgb
-from imputil import rgb
+from imputil import imprgbcode
 
 class LED():
     def __init__(self):
