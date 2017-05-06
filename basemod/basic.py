@@ -1,2 +1,0 @@
-
-class MetaBasic(type):
