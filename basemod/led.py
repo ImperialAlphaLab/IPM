@@ -1,7 +1,10 @@
+from IPM.core.Basic import Basic
 from imputil import rgb
 from imputil import imprgbcode
 
-class LED():
+class LED(Basic):
+    is_ElectronicComposent = True
+    
     def __init__(self):
         self.Name = ""
         self.Pin = 0
