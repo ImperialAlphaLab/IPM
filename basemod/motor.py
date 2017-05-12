@@ -1,34 +1,40 @@
+from ipm.core.basic import Basic
 
-class MOTOR():
+
+class Motor(Basic):
     
-    def __init__(self):
-        self.Name = ""
-        self.Pins = []
-        self.State = False
-        self.Position = []
-        self.Cspeed = 0
-        self.Caccel = 0
-        self.Speedgraph = []
-        self.Accelgraph = []
+    def __init__(self, name):
+        self._name = ""
+        self._pins = []
+        self._state = False
+        self._position = []
+        self._cspeed = 0
+        self._caccel = 0
+        self._speedgraph = []
+        self._accelgraph = []
         
-    def _activate(self):
+    def activate(self):
         pass
-    def _desactivate(self):
+    
+    def desactivate(self):
         pass
-    def _record(self):
+    
+    def record(self):
         pass
-    def _srecord(self):
+    
+    def srecord(self):
         pass
-    def _get_name(self):
-        return self.Name
-    def _set_name(self, name):
-        self.Name = name
-    def _get_pos(self):
-        return self.Position
-    def _set_pos(self,pos):
-        self.Position = pos
+    
+    @property
+    def position(self):
+        return self._position
+    
+    @property
+    def position(self, newpos):
+        self._position = newpos
+    
         
-class STPMOTOR(MOTOR):
+class StepperMotor(Motor):
     
     def __init__(self):
         MOTOR.__init__(self)
@@ -48,7 +54,7 @@ class STPMOTOR(MOTOR):
         pass
     
     
-class SRVMOTOR(MOTOR):
+class ServoMotor(Motor):
     def __init__(self):
         MOTOR.__init__(self)
         self.Cangle = 0
