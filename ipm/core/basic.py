@@ -1,7 +1,8 @@
 
 from .core import BasicMeta, with_metaclass
 
-class Basic(with_metaclass(BasicMeta)):
+class Basic(object):
+    
     is_ElectronicComposent = False
     is_Signal = False
     is_Mecanico = False
